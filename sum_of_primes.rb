@@ -4,22 +4,22 @@ def sum_primes(nth_prime)
   @ans = 2
   @prime_candidate = 3
   @prime_flag = true
-  while @counter<nth_prime do
-    for prime in @ans_arr do
-      if @prime_candidate % prime == 0 
-        @prime_flag = false
-        
-      end
+  
+  while @counter < nth_prime do
+    @ans_arr.each do |prime|
+      @prime_flag = false if @prime_candidate % prime == 0        
     end
+
     if @prime_flag == false
-      @prime_candidate +=2
+      @prime_candidate += 2
       @prime_flag = true
     else
-      @ans +=@prime_candidate
+      @ans += @prime_candidate
       @ans_arr << @prime_candidate
-      @counter+=1
+      @counter += 1
     end
   end
+
   return @ans
 end
 

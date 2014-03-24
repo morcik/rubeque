@@ -3,5 +3,6 @@ def count(array)
   array.each { |elem| @ans[elem] = @ans.fetch(elem, 0) + 1 }
   return @ans
 end
+
 @test = ['cat', 'dog', 'fish', 'fish']
 print count(@test)

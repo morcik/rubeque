@@ -2,10 +2,12 @@ def separate_with_comma(n)
   @temp = n.to_s
   @i = 1
   @border = (n.to_s.length-1)/3
+  
   while @i<= @border do 
      @temp = @temp.insert((@i*(-4)),",")
      @i+=1
   end
+  
   return @temp
 end
 
